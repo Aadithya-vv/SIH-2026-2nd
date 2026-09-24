@@ -1,0 +1,486 @@
+{
+  "label": "DEMO_REFERENCE",
+  "ports": [
+    {
+      "name": "Newcastle",
+      "country": "Australia",
+      "maximum_draft": 18,
+      "maximum_loa": 310,
+      "maximum_beam": 50,
+      "cargo_capabilities": [
+        "COKING_COAL",
+        "THERMAL_COAL",
+        "IRON_ORE"
+      ],
+      "reference_port_cost": 90000,
+      "reference_waiting_days": 1,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "Hay Point",
+      "country": "Australia",
+      "maximum_draft": 18.5,
+      "maximum_loa": 320,
+      "maximum_beam": 52,
+      "cargo_capabilities": [
+        "COKING_COAL",
+        "THERMAL_COAL",
+        "IRON_ORE"
+      ],
+      "reference_port_cost": 100000,
+      "reference_waiting_days": 1.5,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "Samarinda",
+      "country": "Indonesia",
+      "maximum_draft": 12,
+      "maximum_loa": 230,
+      "maximum_beam": 35,
+      "cargo_capabilities": [
+        "COKING_COAL",
+        "THERMAL_COAL",
+        "IRON_ORE"
+      ],
+      "reference_port_cost": 55000,
+      "reference_waiting_days": 2,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "Paradip",
+      "country": "India",
+      "maximum_draft": 14.5,
+      "maximum_loa": 290,
+      "maximum_beam": 45,
+      "cargo_capabilities": [
+        "COKING_COAL",
+        "THERMAL_COAL",
+        "IRON_ORE"
+      ],
+      "reference_port_cost": 80000,
+      "reference_waiting_days": 2,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "Dhamra",
+      "country": "India",
+      "maximum_draft": 18,
+      "maximum_loa": 310,
+      "maximum_beam": 50,
+      "cargo_capabilities": [
+        "COKING_COAL",
+        "THERMAL_COAL",
+        "IRON_ORE"
+      ],
+      "reference_port_cost": 85000,
+      "reference_waiting_days": 1,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "Visakhapatnam",
+      "country": "India",
+      "maximum_draft": 14,
+      "maximum_loa": 270,
+      "maximum_beam": 43,
+      "cargo_capabilities": [
+        "COKING_COAL",
+        "THERMAL_COAL",
+        "IRON_ORE"
+      ],
+      "reference_port_cost": 75000,
+      "reference_waiting_days": 1.5,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "Gangavaram",
+      "country": "India",
+      "maximum_draft": 19,
+      "maximum_loa": 330,
+      "maximum_beam": 55,
+      "cargo_capabilities": [
+        "COKING_COAL",
+        "THERMAL_COAL",
+        "IRON_ORE"
+      ],
+      "reference_port_cost": 95000,
+      "reference_waiting_days": 1,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "Haldia",
+      "country": "India",
+      "maximum_draft": 9,
+      "maximum_loa": 210,
+      "maximum_beam": 32,
+      "cargo_capabilities": [
+        "COKING_COAL",
+        "THERMAL_COAL",
+        "IRON_ORE"
+      ],
+      "reference_port_cost": 60000,
+      "reference_waiting_days": 3,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "Kamarajar",
+      "country": "India",
+      "maximum_draft": 16,
+      "maximum_loa": 300,
+      "maximum_beam": 48,
+      "cargo_capabilities": [
+        "COKING_COAL",
+        "THERMAL_COAL",
+        "IRON_ORE"
+      ],
+      "reference_port_cost": 80000,
+      "reference_waiting_days": 1.5,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    }
+  ],
+  "vessels": [
+    {
+      "name": "HANDYSIZE",
+      "typical_dwt": 38000,
+      "usable_cargo_capacity": 35000,
+      "typical_draft": 10,
+      "typical_loa": 180,
+      "typical_beam": 28,
+      "reference_speed": 12,
+      "reference_daily_charter_rate": 11000,
+      "fuel_tonnes_per_sea_day": 18,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "SUPRAMAX",
+      "typical_dwt": 58000,
+      "usable_cargo_capacity": 55000,
+      "typical_draft": 12,
+      "typical_loa": 200,
+      "typical_beam": 32,
+      "reference_speed": 12.5,
+      "reference_daily_charter_rate": 15000,
+      "fuel_tonnes_per_sea_day": 25,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "PANAMAX",
+      "typical_dwt": 82000,
+      "usable_cargo_capacity": 75000,
+      "typical_draft": 13.2,
+      "typical_loa": 229,
+      "typical_beam": 32.3,
+      "reference_speed": 13,
+      "reference_daily_charter_rate": 20000,
+      "fuel_tonnes_per_sea_day": 32,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "name": "CAPESIZE",
+      "typical_dwt": 180000,
+      "usable_cargo_capacity": 170000,
+      "typical_draft": 18,
+      "typical_loa": 290,
+      "typical_beam": 45,
+      "reference_speed": 13.5,
+      "reference_daily_charter_rate": 30000,
+      "fuel_tonnes_per_sea_day": 50,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    }
+  ],
+  "routes": [
+    {
+      "origin": "Newcastle",
+      "destination": "Paradip",
+      "distance_nm": 6200,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Newcastle",
+      "destination": "Dhamra",
+      "distance_nm": 6250,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Newcastle",
+      "destination": "Visakhapatnam",
+      "distance_nm": 6000,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Newcastle",
+      "destination": "Gangavaram",
+      "distance_nm": 5980,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Newcastle",
+      "destination": "Haldia",
+      "distance_nm": 6400,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Newcastle",
+      "destination": "Kamarajar",
+      "distance_nm": 5700,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Hay Point",
+      "destination": "Paradip",
+      "distance_nm": 5700,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Hay Point",
+      "destination": "Dhamra",
+      "distance_nm": 5750,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Hay Point",
+      "destination": "Visakhapatnam",
+      "distance_nm": 5500,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Hay Point",
+      "destination": "Gangavaram",
+      "distance_nm": 5480,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Hay Point",
+      "destination": "Haldia",
+      "distance_nm": 5900,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Hay Point",
+      "destination": "Kamarajar",
+      "distance_nm": 5200,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Samarinda",
+      "destination": "Paradip",
+      "distance_nm": 3100,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Samarinda",
+      "destination": "Dhamra",
+      "distance_nm": 3150,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Samarinda",
+      "destination": "Visakhapatnam",
+      "distance_nm": 2900,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Samarinda",
+      "destination": "Gangavaram",
+      "distance_nm": 2880,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Samarinda",
+      "destination": "Haldia",
+      "distance_nm": 3300,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    },
+    {
+      "origin": "Samarinda",
+      "destination": "Kamarajar",
+      "distance_nm": 2650,
+      "provenance": {
+        "source_type": "ASSUMED",
+        "source_name": "DEMO_REFERENCE v1",
+        "retrieved_at": null,
+        "effective_date": "2026-09-01",
+        "notes": "Illustrative assumptions, not official operational limits or live rates. Units: m, tonnes, knots, days, USD."
+      }
+    }
+  ]
+}
