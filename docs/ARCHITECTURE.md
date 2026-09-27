@@ -10,7 +10,7 @@ Voyage duration includes outbound legs for every delivery and return legs betwee
 
 The UI owns draft form state and the last analyzed shipment separately. Editing inputs marks results stale; submit clears previous results and displays loading/errors. Navigation retains the current analysis. Costs for impossible vessels remain visible as hypothetical comparisons, clearly excluded from selection.
 
-SQLite persistence is isolated in `app/persistence/sqlite.py`. Full analyses are stored as immutable JSON snapshots with embedded assumptions and provenance. History retrieval, schema migrations and reporting are deferred to Batch 7. Storage timestamps/row IDs are not inserted into deterministic analytical outputs.
+SQLite persistence is isolated in `app/persistence/sqlite.py`. Full analyses are stored as immutable JSON snapshots with embedded assumptions and provenance. Phase 4 adds an independent charter_analyses table and charter-history retrieval; existing analyses remain unchanged. Storage timestamps/row IDs are not inserted into deterministic analytical outputs.
 
 Forecasting, timing and scenario protocols reserve boundaries without fake implementations. The forecasting interface accepts historical feature tables (freight, bunker, congestion, seasonality, commodity indicators) and returns P10/P50/P90 by horizon. Forecast provenance, calibration and model versioning must be added before exposing forecasts. NumPy/Pandas are available for that future data pipeline; current arithmetic does not need ML.
 
@@ -32,4 +32,13 @@ React adds independent MarketIntelligence, ImportData, FeatureBuilder and Market
 
 ## Batch 3 forecasting
 
-The existing market-store and feature-builder contracts are preserved. app/forecasting adds target validation, supervised dataset construction, baseline/estimator adapters, chronological evaluation, explanations, artifact storage, FreightForecastService and thin routes. Selection validation and final-test evaluation are distinct. Model artifacts are separate from market/reference SQLite data. Forecast retrieval is read-only; training is explicit. The UI adds Freight forecast and saved-outlook panels without altering voyage-cost calculations. Charter timing remains unimplemented. See FORECASTING.md for temporal boundaries and MODEL_CARD.md for limitations.
+The existing market-store and feature-builder contracts are preserved. app/forecasting adds target validation, supervised dataset construction, baseline/estimator adapters, chronological evaluation, explanations, artifact storage, FreightForecastService and thin routes. Selection validation and final-test evaluation are distinct. Model artifacts are separate from market/reference SQLite data. Forecast retrieval is read-only; training is explicit. The UI adds Freight forecast and saved-outlook panels without altering voyage-cost calculations. CharterTimingService now consumes saved forecasts; the forecasting service itself never issues timing decisions. See FORECASTING.md for temporal boundaries and MODEL_CARD.md for limitations.
+
+
+## Phase 4 charter orchestration
+
+`app/charter/models.py` embeds ShipmentRequirement in a typed request and decision contract. `service.py` combines existing reference/feasibility/voyage/cost calculations, publication-gated MarketSnapshotService and immutable Phase 3 metadata. `engine.py` contains pure interpolation and deterministic candidate policy/regret/window calculations; there are no model fits, HTTP calls or secret weighted scores in it. `repository.py` adds immutable JSON evidence snapshots to analyses.sqlite3. `api.py` provides analyze, history, retrieval and explanation; comparison is part of analyze.
+
+`demos.py` explicitly seeds two separately labelled simulated histories and invokes Phase 3 only when demo preparation is requested. Normal analysis never retrains. Forecast model IDs, the complete forecast and market snapshots are embedded in each decision, so history replay does not depend on current market/model selection. Direct USD/day and explicitly consented index ratio are separate cost mappings.
+
+React adds CharterDecision and DecisionHistory. Input changes debounce recalculation with stale-result indication and response-race protection. Deadline/buffer changes trigger the same backend policy. The flagship view shows a cost band, unsafe date region, window, timeline, explanations and audit basis. New tests run isolated charter persistence via FIP_ANALYSIS_DB. No Phase 1?3 API contract is changed.

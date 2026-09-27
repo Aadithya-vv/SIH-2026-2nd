@@ -16,6 +16,7 @@ export default defineConfig({
       env: {
         FIP_MARKET_DB: "../data/e2e-market.sqlite3",
         FIP_ARTIFACT_DIR: "../artifacts/e2e-freight",
+        FIP_ANALYSIS_DB: "../data/e2e-analyses.sqlite3",
       },
       reuseExistingServer: false,
     },

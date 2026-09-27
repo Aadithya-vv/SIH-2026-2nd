@@ -837,3 +837,24 @@ fieldset > details {
     align-items: flex-start;
   }
 }
+
+/* Phase 4: restrained procurement decision workspace. */
+.charter-fields { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.charter-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.charter-actions button { border: 1px solid #49615f; padding: 10px 14px; background: #1c3031; color: #c2dbd6; cursor: pointer; }
+.charter-consent { display: flex; flex-direction: row; gap: 10px; align-items: center; margin: 18px 0; font-size: 13px; }
+.charter-consent input { width: auto; height: auto; flex-shrink: 0; }
+.charter-hero { border-top: 4px solid #6a9b95; background: #182e30; padding: 24px; }
+.charter-hero h2 { font-size: clamp(25px, 4vw, 42px); margin: 15px 0; letter-spacing: -.02em; }
+.charter-window { font-size: 17px; }
+.charter-reasons li { padding: 8px 0; line-height: 1.6; }
+.charter-timeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.charter-timeline strong { font-size: 13px; overflow-wrap: anywhere; }
+.charter-chart { width: 100%; min-width: 0; }
+.charter-assumptions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 25px; }
+.charter-assumptions div { border-bottom: 1px solid #35494a; padding: 8px 0; overflow-wrap: anywhere; }
+.charter-assumptions dt { font-size: 12px; text-transform: capitalize; color: #96b5b0; }
+.charter-assumptions dd { margin: 5px 0; font-size: 13px; }
+.charter-result.stale { opacity: .6; }
+@media (max-width: 900px) { .charter-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); } .charter-timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 550px) { .charter-fields, .charter-assumptions, .charter-timeline { grid-template-columns: 1fr; } .charter-actions button { width: 100%; } }

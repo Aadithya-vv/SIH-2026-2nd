@@ -2,7 +2,7 @@
 
 ## Intended use
 
-Inspect probabilistic freight scenarios, baseline comparisons and point-in-time evaluation. Support development of a later decision engine. **Not an autonomous chartering authority**, broker quote, trading signal or production forecasting service.
+Inspect probabilistic freight scenarios, baseline comparisons and point-in-time evaluation. Supply saved probabilistic inputs to the separate Phase 4 decision-support engine. **Not an autonomous chartering authority**, broker quote, trading signal or production forecasting service.
 
 ## Current data and provenance
 
@@ -24,4 +24,11 @@ No vessel availability, charter contracts, inventories, arrival economics or opt
 
 ## Safeguards and next work
 
-Publication cutoffs, train-only preprocessing, explicit missing/stale states, versioned artifacts, fixed seeds, stored origin-level audit, visible baselines and untouched final-test selection policy. Next scientific work is reviewed real histories, richer publication/revision evidence and more rolling origins with chronological probabilistic benchmarking. Next product batch is Batch 4 charter timing, not implemented here.
+Publication cutoffs, train-only preprocessing, explicit missing/stale states, versioned artifacts, fixed seeds, stored origin-level audit, visible baselines and untouched final-test selection policy. Next scientific work is reviewed real histories, richer publication/revision evidence and more rolling origins with chronological probabilistic benchmarking. Phase 4 charter timing is implemented separately; it consumes immutable forecast metadata without retraining or test-based tuning.
+
+
+## Phase 4 consumer limitations
+
+The timing engine uses P10/P50/P90 as scenarios, interpolates between saved horizons and compares shipment-level costs. It does not claim a joint distribution, expected cost, expected regret, calibrated daily interpolation or real-world optimal stopping. CONSERVATIVE vetoes HIGH_UNCERTAINTY waiting; other profiles apply disclosed interval-width, downside and slack caps. All current decisions have LIMITED evidence because operational references and vessel availability are assumed, regardless of favorable synthetic forecast metrics.
+
+Two explicitly constructed seeded demonstration histories exercise timing branches using the unchanged forecasting methodology. Their chosen trend/noise structure is for demonstration and cannot establish real-market performance. Test scores remain reported without tuning the decision policy against them. Index-to-hire conversion only occurs in the separate timing consumer with explicit consent and a disclosed unvalidated ratio assumption. No forecast quantities are changed by risk preferences.

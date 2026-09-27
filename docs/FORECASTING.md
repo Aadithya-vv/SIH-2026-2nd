@@ -2,7 +2,7 @@
 
 ## Scope and targets
 
-Daily freight series from the existing MarketStore. Original units/currencies, route and vessel metadata are preserved. Index points are never converted into USD/day or voyage costs. ForecastTarget accepts series_id, timezone-aware as_of_time, a subset of horizons [1,3,7,14], up to eight context series and optional route/vessel assertions. Forecasts remain separate from charter timing. No Batch 4 decisions exist.
+Daily freight series from the existing MarketStore. Original units/currencies, route and vessel metadata are preserved. This forecasting service never converts index points into USD/day or voyage costs. The separate Phase 4 consumer can apply an explicitly consented, unvalidated index ratio. ForecastTarget accepts series_id, timezone-aware as_of_time, a subset of horizons [1,3,7,14], up to eight context series and optional route/vessel assertions. Forecasts remain separate from charter timing. Phase 4 decisions are produced only by the separate charter service.
 
 A historical as-of date is an explicit replay of what was knowable then. The demo ends on 2026-08-31; forecasts anchored there must not be described as forecasts from today. GET responses identify historical origins and flag origins older than seven days. Training at a stale origin with no recent data fails rather than generating invented current forecasts.
 

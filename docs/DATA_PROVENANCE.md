@@ -25,3 +25,12 @@ Observation date, publication availability and ingestion time are distinct. A us
 ## Batch 3 forecast provenance
 
 FORECAST identifies model outputs. Input source types remain SIMULATED/USER_IMPORT/etc. Metadata retains complete source-series provenance, dataset hash, feature transformations, model/library version, seed, hyperparameters, training cutoff and evaluation period. Feature rows retain availability lineage; backtest records retain forecast origin, target date, actual publication time and maximum training feature/label times. Simulated inputs force the label SIMULATED DATA BACKTEST even when mixed with imports. Historical forecasts are anchored to their recorded as-of, not the current clock.
+
+
+## Phase 4 decision provenance
+
+Charter decisions are DERIVED; evidence embeds original shipment, reference assumptions, complete forecast, model version/cutoff, market source/publication times and exact candidate calculations. Both-port waiting observations replace reference assumptions only when fresh, compatible and unflagged. Otherwise a visible ASSUMED_REFERENCE_FALLBACK is used with an unavailable/stale status; missing congestion is never invented as a current observation.
+
+USD/day targets retain currency and unit. An explicitly consented index ratio is ASSUMED (or user-anchored), not a foreign exchange conversion. Storage and contractual demurrage inputs are USER_INPUT; default demurrage is an ASSUMED fixed fraction of current hire. Missing stockout/storage economics are NOT MODELLED or UNQUANTIFIED. Historical forecasts generated after their origin are replay calculations, not evidence they were available then. Demo reference versions are assumptions even when their effective date follows a replay origin.
+
+Two Phase 4 demo histories use fixed seeds 26054/26055 and are labelled SIMULATED in the Phase 2 registry and every downstream forecast. Real Phase 3 training generates their predictions; no forecasts, scores, savings or decisions are hardcoded. Synthetic demonstration performance must not be presented as market skill. See CHARTER_TIMING.md for exact generator and cost mapping.

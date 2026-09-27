@@ -1,16 +1,25 @@
 # Roadmap
 
-1. **Batch 1 - Vessel + Port + Voyage + Cost Decision Engine.** Current vertical slice, demo references and deterministic explanations.
-2. **Batch 2 - Market & Operational Data Intelligence (implemented).** Replaceable adapters, source/license register, official port/terminal references, route evidence, validation, units, retrieval/effective timestamps, stale/missing-data handling and immutable input snapshots. No silent demo fallback.
-3. **Batch 3 - Probabilistic Freight Forecasting.** Historical baselines, time-aware backtests, P10/P50/P90, calibration and model provenance. No invented accuracy.
-4. **Batch 4 - Optimal Charter Timing.** Charter today vs expected value of waiting with uncertainty, deadlines, inventory and operational risk.
-5. **Batch 5 - Scenario / Disruption Simulation.** Seeded reproducible fuel, freight, congestion, cyclone and inventory changes; baseline comparison.
-6. **Batch 6 - Annual Procurement Portfolio Optimization.** Cargo allocation, schedule and budget constraints.
-7. **Batch 7 - Decision History + Reports.** Queryable snapshots, comparative audit, export and reporting.
-8. **Batch 8 - Context-Aware Procurement Copilot.** Explain validated engine outputs and translate intent; never invent calculations.
+**CORE PROTOTYPE FEATURE FREEZE ? Phase 4 complete (2026-09-27).**
 
+## Implemented prototype
 
-Batch 2 delivers source registry, seeded demo/CSV adapters, validation, historical storage, provenance, quality, market context, descriptive trends and point-in-time feature export. External provider feeds remain unconfigured. Next: Batch 3 probabilistic forecasting, starting with vetted histories/publication evidence, naive baselines and chronological splits; evaluate P10/P50/P90 coverage and error honestly. Do not interpret simulated performance as real-world skill.
+1. **Phase 1: Logistics decision engine.** Shipment, both-port/vessel feasibility, sequential voyages, six-component cost comparison and explainable vessel recommendation.
+2. **Phase 2: Market and operational intelligence.** Source registry, simulated and imported histories, quality/provenance, publication-gated snapshots and feature datasets.
+3. **Phase 3: Probabilistic freight forecasts.** Five model families, chronological calibration/selection/test, 1/3/7/14-day P10/P50/P90, saved artifacts and inspectable performance.
+4. **Phase 4: Charter timing decision support.** Every safe daily candidate, deadline gate, shipment-level cost scenarios, downside/regret, deterministic procurement profiles, charter windows, explanations, automatic deadline sensitivity, saved audit/history and four seeded demonstrations.
 
+Validation: 112 backend tests, four browser workflows, frontend lint, TypeScript and production build passed. Desktop and narrow-screen charter views were visually inspected. See PHASE_4_RECEIPT.md for calculations, performance and limitations.
 
-Batch 3 implemented: naive baselines, Ridge, quantile boosting, chronological calibration/selection/test, walk-forward audit, quantiles, artifacts and forecast UI. Demonstration results are SIMULATED; real-world skill is not established. Batch 4 remains unimplemented and must integrate forecast distributions with operational constraints rather than inferring WAIT from a falling median.
+The functional prototype is frozen. No Phase 5 or other major functionality has been started. Corrections within this scope remain possible if needed.
+
+## Future work ? not implemented
+
+- Authorized/licensed real freight histories and live feeds, stronger chronological calibration studies and commercial validation.
+- Actual vessel availability, AIS, official port APIs and weather/disruption feeds.
+- Executable charter quotes, validated index-to-hire relationships and contractual laytime/demurrage.
+- Inventory/stockout economics, enterprise ERP integrations, contract and portfolio optimization.
+- General disruption simulation and extended reporting/export.
+- Optional procurement assistant, only with separately approved scope and validated calculation boundaries.
+
+These are future possibilities, not connected capabilities or promises. No authentication, chatbot/LLM, blockchain, AIS or unrelated integration was added. Current outputs remain prototype recommendations with explicit simulated data and assumed operational references; not guaranteed savings, real-world optimal dates or production readiness.

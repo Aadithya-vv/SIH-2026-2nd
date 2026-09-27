@@ -7,6 +7,8 @@ import { MarketIntelligence } from "./pages/MarketIntelligence";
 import { MarketContext } from "./components/MarketContext";
 import { FreightForecast } from "./pages/FreightForecast";
 import { FreightOutlook } from "./components/FreightOutlook";
+import { CharterDecision } from "./pages/CharterDecision";
+import { DecisionHistory } from "./pages/DecisionHistory";
 
 const modules = [
   "Control center",
@@ -14,6 +16,7 @@ const modules = [
   "Port & vessel",
   "Market intelligence",
   "Freight forecast",
+  "Charter decision",
   "Scenario lab",
   "Portfolio",
   "Decision history",
@@ -44,6 +47,7 @@ function Status({ value }: { value: string }) {
 
 export default function App() {
   const [page, setPage] = useState("Voyage optimizer");
+  const [savedCharterId, setSavedCharterId] = useState<string | null>(null);
   const [ports, setPorts] = useState<Port[]>([]);
   const [form, setForm] = useState<Shipment>(initial);
   const [analysis, setAnalysis] = useState<Analysis | null>(null);
@@ -229,8 +233,8 @@ export default function App() {
         </div>
         <div>
           <span>Charter timing</span>
-          <strong className="smaller">Not yet modelled</strong>
-          <small>Forecasting is a future module</small>
+          <button className="text-button" onClick={() => {setSavedCharterId(null);setPage("Charter decision");}}>Open charter decision →</button>
+          <small>Analyze forecast, deadline and downside separately</small>
         </div>
       </div>
       <details open className="why">
@@ -399,12 +403,12 @@ export default function App() {
           {modules.map((m, i) => (
             <button
               key={m}
-              onClick={() => setPage(m)}
+              onClick={() => {if(m === "Charter decision") setSavedCharterId(null);setPage(m);}}
               className={page === m ? "active" : ""}
             >
               <span className="nav-index">0{i + 1}</span>
               {m}
-              {i > 4 && <span className="planned-dot">&#9675;</span>}
+              {["Scenario lab", "Portfolio"].includes(m) && <span className="planned-dot">&#9675;</span>}
             </button>
           ))}
         </nav>
@@ -414,7 +418,7 @@ export default function App() {
           <p>
             Market data carries its own source labels. No live market feeds.
           </p>
-          <span>BATCH 03 / PROTOTYPE</span>
+          <span>PHASE 04 / CORE PROTOTYPE</span>
         </div>
       </aside>
       <main>
@@ -435,18 +439,22 @@ export default function App() {
                       ? "Inspect historical data, source provenance and forecast readiness."
                       : page === "Freight forecast"
                         ? "Inspect forecast ranges, historical performance and model provenance."
-                        : "Reserved for a future development batch."}
+                        : page === "Charter decision"
+                          ? "Compare shipment economics, schedule slack and forecast downside."
+                          : page === "Decision history"
+                            ? "Reconstruct the evidence behind saved charter decisions."
+                            : "Future work outside the core prototype."}
             </p>
           </div>
           <span className="edition">
-            {page === "Freight forecast"
+            {["Charter decision", "Decision history"].includes(page) ? "PHASE 04" : page === "Freight forecast"
               ? "BATCH 03"
               : page === "Market intelligence"
                 ? "BATCH 02"
                 : "BATCH 01"}
             <br />
             <b>
-              {page === "Market intelligence"
+              {["Charter decision", "Decision history"].includes(page) ? "CHARTER DECISION SUPPORT" : page === "Market intelligence"
                 ? "MARKET DATA FOUNDATION"
                 : page === "Freight forecast"
                   ? "PROBABILISTIC FORECAST"
@@ -721,7 +729,9 @@ export default function App() {
         )}
         {page === "Market intelligence" && <MarketIntelligence />}
         {page === "Freight forecast" && <FreightForecast />}
-        {modules.indexOf(page) > 4 && (
+        {page === "Charter decision" && <CharterDecision key={savedCharterId ?? 'new'} ports={ports} savedId={savedCharterId} onForecast={() => setPage("Freight forecast")} />}
+        {page === "Decision history" && <DecisionHistory onOpen={id => {setSavedCharterId(id);setPage("Charter decision");}} />}
+        {["Scenario lab", "Portfolio"].includes(page) && (
           <div className="empty planned">
             <span className="eyebrow">
               PLANNED MODULE / BATCH{" "}
@@ -784,7 +794,7 @@ export default function App() {
           </details>
         )}
         <footer>
-          <span>FREIGHT INTELLIGENCE / ENGINE v0.3</span>
+          <span>FREIGHT INTELLIGENCE / ENGINE v0.4</span>
           <span>DEMO ESTIMATES &middot; NOT VALIDATED FOR CHARTERING</span>
         </footer>
       </main>

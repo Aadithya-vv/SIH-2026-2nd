@@ -13,7 +13,7 @@ test("analyzes a shipment through the API and explains infeasibility", async ({
     page.getByRole("heading", { name: "Recommended strategy" }),
   ).toBeVisible();
   await expect(
-    page.getByText("Not yet modelled", { exact: true }),
+    page.getByRole("button", { name: "Open charter decision" }),
   ).toBeVisible();
   await expect(page.getByText("Inputs changed.", { exact: false })).toHaveCount(
     0,

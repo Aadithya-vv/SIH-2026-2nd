@@ -31,3 +31,8 @@ A mapped publication/availability column is an explicit, unverified user asserti
 ## Batch 3 usage
 
 Forecasting consumes these existing sources; it does not add external feeds. The reference demonstration uses the simulated Panamax target and simulated broad dry-bulk, VLSFO, coking-coal and Paradip contexts. Source quality/availability constraints are retained. No simulated evaluation may be described as Baltic Exchange forecast accuracy.
+
+
+## Phase 4 explicit demo preparation
+
+POST /api/charter/demos/prepare adds two seeded, SIMULATED Panamax Newcastle?Paradip USD/day histories to the existing store and trains saved Phase 3 artifacts. These are constructed declining/uncertain policy demonstrations, not licensed freight data. Preparation is opt-in, idempotent and never runs inside charter analysis. See CHARTER_TIMING.md for seeds/formula. No external source is added.

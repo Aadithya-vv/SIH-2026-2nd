@@ -15,3 +15,10 @@ Preserved the Batch 1 analytical contracts. Added source registry, category obse
 ## 0.3.0 - 2026-09-20 - Batch 3
 
 Added point-in-time freight forecasting, three baselines, Ridge and quantile gradient boosting, chronological calibration/selection/final-test evaluation, audited expanding-origin backtests, per-horizon quantiles/metrics/selection, versioned artifacts and forecasting APIs. Added Freight Forecast UI, historical-vs-forecast chart, performance/association panels and saved outlook integrations. Preserved Batch 1/2 contracts and tests. Added scikit-learn with locked transitive dependencies. No Batch 4 charter decision. See docs/BATCH_3_RECEIPT.md.
+
+
+## 0.4.0 - 2026-09-27 - Phase 4 / core prototype feature freeze
+
+Added CharterTimingService consuming saved Phase 3 forecasts without retraining, explicit daily-hire/index-proxy mapping, both-port congestion integration, hard buffered arrival gates, daily candidate costing, waiting storage, disclosed demurrage, aligned-scenario regret, deterministic risk profiles and contiguous charter windows. Added flagship Charter decision UI and immutable Decision history. Four seeded scenario presets use real Phase 3 training on explicitly synthetic histories. Existing analytical engines and model-selection methodology remain unchanged.
+
+Validation: 112 backend tests, four browser workflows, lint, TypeScript and production build passed. Visual desktop/mobile review completed. See docs/PHASE_4_RECEIPT.md. Core prototype feature freeze; no Phase 5 started.
